@@ -1,0 +1,66 @@
+
+entity Ticket {
+    sourceId String,
+	sourceType String,
+	type String,
+	subject String,
+    description String,
+	priority String,
+	status String,
+	ownerId Long,
+    assignedId Long,
+	assignedGroupId Long,
+	tags String,
+	isPrivate Boolean,
+    dueDate Date,
+	followto Long,
+    notify Boolean,
+	notificationTime Date,
+    userId Long,
+	createDate Date,
+    createdBy Long,
+	modifiedDate Date,
+    modifiedBy Long
+}
+
+entity TicketComment {
+	body String,
+    isPublic Boolean,
+    authorId Long,
+    replyto Long,
+    attachments String,
+    userId Long,
+    createDate Date,
+    createdBy Long,
+	modifiedDate Date,
+    modifiedBy Long
+}
+
+entity TicketFilter {
+    filterName String,
+    filter String,
+    userId Long,
+	createDate Date,
+    createdBy Long,
+	modifiedDate Date,
+    modifiedBy Long
+}
+
+
+// defining multiple OneToMany relationships with comments
+relationship OneToMany {
+	Ticket to TicketComment{employee},
+}
+
+// Set pagination options
+paginate Ticket, TicketComment with infinite-scroll
+paginate Ticket with pagination
+
+// Use Data Transfer Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
