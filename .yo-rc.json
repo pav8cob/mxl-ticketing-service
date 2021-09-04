@@ -40,7 +40,9 @@
     "pages": [],
     "creationTimestamp": 1630735313837,
     "jwtSecretKey": "ZmY2MTE1OTUwNzM0Nzc4NDQ4YjIyOTMxOGZlOTJiNzkyN2M5Mzc5ZWFiMmU1ZjZlMTgzNTQ1NmViZjU2YWI3OTE4ZGVlN2JlNTk1ZWY3ODM2ODczYzlkN2YxYTNkN2U4MGMwMDg1MWUyNTg5ZDIwMWI5NjJjYzU1ZjU4NTgwMmQ=",
-    "reactive": false
+    "reactive": false,
+    "entities": ["Ticket", "TicketComment", "TicketFilter"],
+    "lastLiquibaseTimestamp": 1630736979000
   },
   "git-provider": "GitHub",
   "git-company": "pav8cob",

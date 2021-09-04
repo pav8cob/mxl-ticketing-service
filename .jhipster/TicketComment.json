@@ -1,0 +1,67 @@
+{
+  "name": "TicketComment",
+  "fields": [
+    {
+      "fieldName": "body",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "isPublic",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "authorId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "replyto",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "attachments",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "userId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "createDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "modifiedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "modifiedBy",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "ticket",
+      "otherEntityRelationshipName": "ticketComment",
+      "relationshipName": "employee"
+    }
+  ],
+  "entityTableName": "ticket_comment",
+  "dto": "no",
+  "pagination": "infinite-scroll",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "mxlTicketing",
+  "clientRootFolder": "mxlTicketing",
+  "databaseType": "mongodb",
+  "changelogDate": "20210904062938"
+}
