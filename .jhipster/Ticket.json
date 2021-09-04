@@ -1,0 +1,112 @@
+{
+  "name": "Ticket",
+  "fields": [
+    {
+      "fieldName": "sourceId",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "sourceType",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "type",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "subject",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "priority",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ownerId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "assignedId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "assignedGroupId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "tags",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isPrivate",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "dueDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "followto",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "notify",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "notificationTime",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "userId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "createDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "modifiedDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "modifiedBy",
+      "fieldType": "Long"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "ticketComment",
+      "otherEntityRelationshipName": "employee",
+      "relationshipName": "ticketComment"
+    }
+  ],
+  "entityTableName": "ticket",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "applications": "*",
+  "microserviceName": "mxlTicketing",
+  "clientRootFolder": "mxlTicketing",
+  "databaseType": "mongodb",
+  "changelogDate": "20210904062937"
+}
